@@ -1,9 +1,9 @@
 """End-to-end UI test (Playwright, Chromium). Discord is mocked; nothing is sent to any real webhook.
 Run: python3 -m http.server 8811 --bind 127.0.0.1 &  then  python3 tests/ui.test.py [--live-playground]
 With --live-playground the lab test really calls play.rust-lang.org/execute (public API)."""
-import sys, json
+import sys, json, os
 from playwright.sync_api import sync_playwright
-BASE = "http://127.0.0.1:8811/index.html"
+BASE = os.environ.get("RUSTRO_URL", "http://127.0.0.1:8811/index.html")
 LIVE = "--live-playground" in sys.argv
 errs, discord = [], []
 def ok(c, m):

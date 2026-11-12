@@ -5,7 +5,7 @@ import json, sys, os
 from playwright.sync_api import sync_playwright
 BASE = (sys.argv[1] if len(sys.argv) > 1 else "http://127.0.0.1:8811/index.html").rstrip("/")
 if not BASE.endswith(".html"): BASE += "/"
-OUT = "docs/screenshots/"; os.makedirs(OUT, exist_ok=True)
+OUT = os.environ.get("RUSTRO_SHOTS", "docs/screenshots/"); os.makedirs(OUT, exist_ok=True)
 def answer_all(pg, n, wrong_at=()):
     for i in range(n):
         qid = pg.get_attribute("#qtext", "data-qid")
