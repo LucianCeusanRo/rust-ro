@@ -1,8 +1,8 @@
 {
   "name": "rust-ro",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
-  "description": "Bilingual (RO/EN) Rust learning platform — static site, no backend.",
+  "description": "Bilingual (RO/EN) Rust learning PWA \u2014 24 lessons, 500+ rustc-checked questions, 10 games, labs. Static, no backend.",
   "license": "MIT",
   "scripts": {
     "serve": "python3 -m http.server 8811 --bind 127.0.0.1",
@@ -11,6 +11,7 @@
     "test": "node tests/converter.test.mjs && node tests/discord.test.mjs && node tools/check-snippets.mjs",
     "screenshots": "python3 tools/screenshots.py",
     "bench": "python3 bench/run.py && node tools/gen-content.mjs",
-    "build": "node tools/build-dist.mjs"
+    "build": "node tools/build-dist.mjs",
+    "test:ui": "python3 tests/ui.test.py"
   }
 }

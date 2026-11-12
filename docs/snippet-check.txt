@@ -412,9 +412,169 @@ Lessons: 24 · questions: 533 (code-verified: 258) · labs: 32
 ✔ Q.l24-20                   compiles + runs + output ✓
 ✔ Q.l24-21                   compiles + runs + output ✓
 ✔ Q.l24-22                   compiles + runs + output ✓
+✔ G.fill1                    compiles + runs + output ✓
+✔ G.fill1.no1                FAILS as expected (wrong option)
+✔ G.fill1.no2                FAILS as expected (wrong option)
+✔ G.fill1.no3                FAILS as expected (wrong option)
+✔ G.fill2                    compiles + runs + output ✓
+✔ G.fill2.no1                FAILS as expected (wrong option)
+✔ G.fill2.no2                FAILS as expected (wrong option)
+✔ G.fill2.no3                FAILS as expected (wrong option)
+✔ G.fill3                    compiles + runs + output ✓
+✔ G.fill3.no1                FAILS as expected (wrong option)
+✔ G.fill3.no2                FAILS as expected (wrong option)
+✔ G.fill3.no3                FAILS as expected (wrong option)
+✔ G.fill4                    compiles + runs + output ✓
+✔ G.fill4.no1                FAILS as expected (wrong option)
+✔ G.fill4.no2                FAILS as expected (wrong option)
+✔ G.fill4.no3                FAILS as expected (wrong option)
+✔ G.fill5                    compiles + runs + output ✓
+✔ G.fill5.no1                FAILS as expected (wrong option)
+✔ G.fill5.no2                FAILS as expected (wrong option)
+✔ G.fill5.no3                FAILS as expected (wrong option)
+✔ G.fill6                    compiles + runs + output ✓
+✔ G.fill6.no1                FAILS as expected (wrong option)
+✔ G.fill6.no2                FAILS as expected (wrong option)
+✔ G.fill6.no3                FAILS as expected (wrong option)
+✔ G.fill7                    compiles + runs + output ✓
+✔ G.fill7.no1                FAILS as expected (wrong option)
+✔ G.fill7.no2                FAILS as expected (wrong option)
+✔ G.fill7.no3                FAILS as expected (wrong option)
+✔ G.fill8                    compiles + runs + output ✓
+✔ G.fill8.no1                FAILS as expected (wrong option)
+✔ G.fill8.no2                FAILS as expected (wrong option)
+✔ G.fill8.no3                FAILS as expected (wrong option)
+✔ G.fill9                    compiles + runs + output ✓
+✔ G.fill9.no1                FAILS as expected (wrong option)
+✔ G.fill9.no2                FAILS as expected (wrong option)
+✔ G.fill9.no3                FAILS as expected (wrong option)
+✔ G.fill10                   compiles + runs + output ✓
+✔ G.fill10.no1               FAILS as expected (wrong option)
+✔ G.fill10.no2               FAILS as expected (wrong option)
+✔ G.fill10.no3               FAILS as expected (wrong option)
+✔ G.fill11                   compiles + runs + output ✓
+✔ G.fill11.no1               FAILS as expected (wrong option)
+✔ G.fill11.no2               FAILS as expected (wrong option)
+✔ G.fill11.no3               FAILS as expected (wrong option)
+✔ G.fill12                   compiles + runs + output ✓
+✔ G.fill12.no1               FAILS as expected (different output)
+✔ G.fill12.no2               FAILS as expected (different output)
+✔ G.fill12.no3               FAILS as expected (different output)
+✔ G.fill13                   compiles + runs + output ✓
+✔ G.fill13.no1               FAILS as expected (wrong option)
+✔ G.fill13.no2               FAILS as expected (wrong option)
+✔ G.fill13.no3               FAILS as expected (wrong option)
+✔ G.fill14                   compiles + runs + output ✓
+✔ G.fill14.no1               FAILS as expected (different output)
+✔ G.fill14.no2               FAILS as expected (different output)
+✔ G.fill14.no3               FAILS as expected (wrong option)
+✔ G.fill15                   compiles + runs + output ✓
+✔ G.fill15.no1               FAILS as expected (wrong option)
+✔ G.fill15.no2               FAILS as expected (wrong option)
+✔ G.fill15.no3               FAILS as expected (wrong option)
+✔ G.fill16                   compiles + runs + output ✓
+✔ G.fill16.no1               FAILS as expected (different output)
+✔ G.fill16.no2               FAILS as expected (wrong option)
+✔ G.fill16.no3               FAILS as expected (wrong option)
+✔ G.fill17                   compiles + runs + output ✓
+✔ G.fill17.no1               FAILS as expected (different output)
+✔ G.fill17.no2               FAILS as expected (different output)
+✔ G.fill17.no3               FAILS as expected (different output)
+✔ G.fill18                   compiles + runs + output ✓
+✔ G.fill18.no1               FAILS as expected (wrong option)
+✔ G.fill18.no2               FAILS as expected (wrong option)
+✔ G.fill18.no3               FAILS as expected (wrong option)
+✔ G.fill19                   compiles + runs + output ✓
+✔ G.fill19.no1               FAILS as expected (wrong option)
+✔ G.fill19.no2               FAILS as expected (wrong option)
+✔ G.fill19.no3               FAILS as expected (wrong option)
+✔ G.fill20                   compiles + runs + output ✓
+✔ G.fill20.no1               FAILS as expected (wrong option)
+✔ G.fill20.no2               FAILS as expected (wrong option)
+✔ G.fill20.no3               FAILS as expected (wrong option)
+✔ G.type1.ok                 compiles
+✔ G.type1.no1                FAILS as expected
+✔ G.type1.no2                FAILS as expected
+✔ G.type1.no3                FAILS as expected
+✔ G.type2.ok                 compiles
+✔ G.type2.no1                FAILS as expected
+✔ G.type2.no2                FAILS as expected
+✔ G.type2.no3                FAILS as expected
+✔ G.type3.ok                 compiles
+✔ G.type3.no1                FAILS as expected
+✔ G.type3.no2                FAILS as expected
+✔ G.type3.no3                FAILS as expected
+✔ G.type4.ok                 compiles
+✔ G.type4.no1                FAILS as expected
+✔ G.type4.no2                FAILS as expected
+✔ G.type4.no3                FAILS as expected
+✔ G.type5.ok                 compiles
+✔ G.type5.no1                FAILS as expected
+✔ G.type5.no2                FAILS as expected
+✔ G.type5.no3                FAILS as expected
+✔ G.type6.ok                 compiles
+✔ G.type6.no1                FAILS as expected
+✔ G.type6.no2                FAILS as expected
+✔ G.type6.no3                FAILS as expected
+✔ G.type7.ok                 compiles
+✔ G.type7.no1                FAILS as expected
+✔ G.type7.no2                FAILS as expected
+✔ G.type7.no3                FAILS as expected
+✔ G.type8.ok                 compiles
+✔ G.type8.no1                FAILS as expected
+✔ G.type8.no2                FAILS as expected
+✔ G.type8.no3                FAILS as expected
+✔ G.type9.ok                 compiles
+✔ G.type9.no1                FAILS as expected
+✔ G.type9.no2                FAILS as expected
+✔ G.type9.no3                FAILS as expected
+✔ G.type10.ok                compiles
+✔ G.type10.no1               FAILS as expected
+✔ G.type10.no2               FAILS as expected
+✔ G.type10.no3               FAILS as expected
+✔ G.type11.ok                compiles
+✔ G.type11.no1               FAILS as expected
+✔ G.type11.no2               FAILS as expected
+✔ G.type11.no3               FAILS as expected
+✔ G.type12.ok                compiles
+✔ G.type12.no1               FAILS as expected
+✔ G.type12.no2               FAILS as expected
+✔ G.type12.no3               FAILS as expected
+✔ G.type13.ok                compiles
+✔ G.type13.no1               FAILS as expected
+✔ G.type13.no2               FAILS as expected
+✔ G.type13.no3               FAILS as expected
+✔ G.type14.ok                compiles
+✔ G.type14.no1               FAILS as expected
+✔ G.type14.no2               FAILS as expected
+✔ G.type14.no3               FAILS as expected
+✔ G.type15.ok                compiles
+✔ G.type15.no1               FAILS as expected
+✔ G.type15.no2               FAILS as expected
+✔ G.type15.no3               FAILS as expected
+✔ G.type16.ok                compiles
+✔ G.type16.no1               FAILS as expected
+✔ G.type16.no2               FAILS as expected
+✔ G.type16.no3               FAILS as expected
+✔ G.type17.ok                compiles
+✔ G.type17.no1               FAILS as expected
+✔ G.type17.no2               FAILS as expected
+✔ G.type17.no3               FAILS as expected
+✔ G.type18.ok                compiles
+✔ G.type18.no1               FAILS as expected
+✔ G.type18.no2               FAILS as expected
+✔ G.type18.no3               FAILS as expected
+✔ G.type19.ok                compiles
+✔ G.type19.no1               FAILS as expected
+✔ G.type19.no2               FAILS as expected
+✔ G.type19.no3               FAILS as expected
+✔ G.type20.ok                compiles
+✔ G.type20.no1               FAILS as expected
+✔ G.type20.no2               FAILS as expected
+✔ G.type20.no3               FAILS as expected
 ✔ NET.port-checker           compiles
 ✔ NET.log-parser             compiles
 ✔ WHY.sieve                  compiles
 ✔ WHY.collatz                compiles
 
-Total checks: 415, ok: 415, failed: 0
+Total checks: 575, ok: 575, failed: 0

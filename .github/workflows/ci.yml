@@ -1,0 +1,35 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: tools/verify-crates
+      - name: Converter + Discord tests (fetch mocked)
+        run: node tests/converter.test.mjs && node tests/discord.test.mjs
+      - name: Compile/run every Rust snippet, lab and code question with rustc/cargo
+        run: node tools/check-snippets.mjs
+      - name: Build dist
+        run: node tools/build-dist.mjs
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: UI test (Playwright, Discord + Playground mocked)
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+          python3 -m http.server 8811 --bind 127.0.0.1 &
+          sleep 1
+          python3 tests/ui.test.py
