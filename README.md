@@ -6,123 +6,108 @@
 
 **▶ Live: [rust-ro.vercel.app](https://rust-ro.vercel.app)**
 
-**Learn Rust in Romanian and English — lessons, exercises, quizzes, network mini projects and a Python/Java → Rust draft converter. Static, no account, works offline.**
+**Learn Rust in Romanian and English — 24 lessons, 533 quiz questions, 32 coding labs and 10 games, beginner to advanced. Static PWA, no account, works offline.**
 
 <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green.svg"></a>
+<a href="https://github.com/LucianCeusanRo/rust-ro/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/LucianCeusanRo/rust-ro/actions/workflows/ci.yml/badge.svg"></a>
 <img alt="Rust" src="https://img.shields.io/badge/Rust-2021_edition-f46623?logo=rust">
-<img alt="Static site" src="https://img.shields.io/badge/site-static%20HTML%2FCSS%2FJS-blue">
+<img alt="Checks" src="https://img.shields.io/badge/rustc%20checks-575%2F575-3fb950">
 <img alt="PWA" src="https://img.shields.io/badge/PWA-offline-5a0fc8">
-<img alt="Snippets checked" src="https://img.shields.io/badge/snippets-50%2F50%20checked%20with%20rustc-3fb950">
-<a href="https://github.com/LucianCeusanRo/rust-ro/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/LucianCeusanRo/rust-ro?style=flat"></a>
-<a href="https://github.com/LucianCeusanRo/rust-ro/commits/main"><img alt="Last commit" src="https://img.shields.io/github/last-commit/LucianCeusanRo/rust-ro"></a>
 
 [English](#-about) · [Română](#-română)
 
 </div>
 
-<p align="center"><img src="docs/screenshots/home-desktop.png" alt="Rust RO home screen" width="900"></p>
-
-## 📑 Table of contents
-
-- [📖 About](#-about)
-- [✨ Features](#-features)
-- [🖼️ Screenshots](#️-screenshots)
-- [🧠 How it works](#-how-it-works)
-- [⚡ Quick start](#-quick-start)
-- [📚 Tutorial](#-tutorial)
-- [⚡ Why Rust (with real numbers)](#-why-rust-with-real-numbers)
-- [🔄 Python/Java → Rust converter](#-pythonjava--rust-converter)
-- [💬 Discord webhook (optional)](#-discord-webhook-optional)
-- [✅ Verification](#-verification)
-- [🗂️ Project structure](#️-project-structure)
-- [🗺️ Roadmap](#️-roadmap)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
-- [🇷🇴 Română](#-română)
+<p align="center"><img src="docs/screenshots/home-desktop.png" alt="Rust RO home: readiness ring, review mistakes, exam simulation" width="820"></p>
 
 ## 📖 About
 
-Rust RO is a free, bilingual (Romanian / English, one-click toggle) platform for learning Rust from zero. It follows the same idea as my STS exam trainer: short lessons, instant feedback, a score you want to improve, and everything stored only in your browser.
-
-- **Used for:** learning Rust basics step by step — setup and Cargo, variables and types, functions and control flow, ownership and borrowing, structs/enums/match, and error handling with `Result`, `Option` and `?`.
-- **Helps:** Romanian speakers who prefer to learn in their language, beginners coming from Python/Java, and network/telecom people who want small, practical Rust tools.
-- All content is written from scratch (not copied from the Rust Book) and **every Rust snippet is compile-checked with `rustc`**.
+Rust RO is a free, bilingual (RO/EN, one-tap toggle) Rust trainer built like my **STS Grilă** exam app: a readiness ring, "review my mistakes", exam simulation with a 1–10 grade, several quiz modes, a day-by-day plan and mini games — all stored only in your browser. Content is written from scratch and **every piece of code is compiled with `rustc`/`cargo`** before it ships.
 
 ## ✨ Features
 
-- 📚 **6 lessons**, each with RO + EN explanations, highlighted code and an **Open in Rust Playground** button on every example and exercise.
-- ✍️ **12 exercises** with starter code, hint and solution (also runnable in the Playground).
-- 📝 **41 quiz questions** with explanations (5–8 per lesson), plus a **final test** of 15 shuffled questions (70% pass mark).
-- ⛔ Intentionally broken examples (E0382, E0384, E0499) so you learn to read compiler errors — the checker verifies they fail with *exactly* that error.
-- 🌐 **Rust for network folks**: a TCP port checker (`std::net`) and a network log parser, runnable locally with `cargo`, with unit tests.
-- ⚡ **Why Rust** page with numbers measured on a real machine (time + peak RAM vs Python) and cited sources.
-- 🔄 **Python/Java → Rust converter**: rule-based, 100% in the browser, no AI, explains each mapping in comments.
-- 💬 **Optional Discord webhook**: post lesson completions, quiz scores and converter output to *your own* channel.
-- 🔥 Progress, best scores and a daily **streak** in `localStorage` — no account, no backend, no tracking.
-- 📱 Mobile-first dark UI, installable **PWA**, works offline; keyboard and screen-reader friendly (skip link, focus management, `aria-live` quiz feedback, reduced-motion support).
+| Area | What you get |
+|---|---|
+| 📚 Lessons | **24** lessons, RO + EN, beginner → expert (table below), highlighted code, intentionally broken examples with the exact compiler error |
+| 📝 Question bank | **533** questions (22 ± 3 per lesson). **258 are code questions verified by the compiler**: 197 "what does it print" (real stdout), 56 "which error" (exact `E0xxx`), 5 compile/test-pass |
+| 🎯 Quiz modes (as in STS Grilă) | 📘 Learn (wrong answers come back) · ✏️ Exercise · 📈 Adaptive (weakest first) · 🏃 Marathon (3 lives) · ⚡ Quick lesson (5 hearts) · lesson quiz (≥ 70% completes a lesson) · ❌ My mistakes (spaced review: right twice and it's gone) · 🎯 **Exam simulation** (20 questions, 20 min, grade = 1 + 9 × correct/20) |
+| 🎮 10 games | 📅 Daily challenge · 👆 True/False swipe (60 s) · ⚡ Lightning (60 s, combo) · 🌧️ Catch the falling answer · 🧠 Memory pairs · 🔢 Put in order · 🧩 Complete the code · 🖨️ What does it print? · 🛑 Which error? · 🏷️ What's the type? |
+| 🧪 Labs | **32** labs with an in-page, phone-friendly editor (quick-key bar for `{ } ( ) ; & : < > " ! ?`, Tab, Ctrl+Enter), **Run** via the official Rust Playground API (`play.rust-lang.org/execute`), automatic check against the expected output, "Run tests" for test labs. axum/wasm-bindgen labs (crates the Playground doesn't have) show the expected output and run locally |
+| 📈 Progress | mastery 0–5 per question, XP + levels, 🔥 streak, readiness ring (theory / labs / games), weak areas, per-lesson mastery, exam history, 24-day plan, export/import JSON |
+| ⚡ Extra | Why Rust (measured numbers + sources), Python/Java → Rust draft converter, network mini projects, optional Discord webhook |
+| 📱 Mobile-first | ≥ 44 px tap targets, bottom nav, light/dark theme, installable PWA with offline cache, keyboard shortcuts (1–4, Enter), reduced-motion support |
+
+### Lessons
+
+| # | Lesson / Lecție | Level |
+|---|---|---|
+| 1 | Setup, Hello World & Cargo | beginner |
+| 2 | Variables, types & mutability | beginner |
+| 3 | Functions & control flow | beginner |
+| 4 | Ownership & borrowing | beginner |
+| 5 | Structs, enums & match | beginner |
+| 6 | Error handling: Result, Option & ? | beginner |
+| 7 | Collections: Vec, String, HashMap | intermediate |
+| 8 | Generics | intermediate |
+| 9 | Traits | intermediate |
+| 10 | Lifetimes | intermediate |
+| 11 | Closures | intermediate |
+| 12 | Iterators | intermediate |
+| 13 | Modules, crates & Cargo | intermediate |
+| 14 | Testing | intermediate |
+| 15 | Smart pointers: Box, Rc, RefCell | advanced |
+| 16 | Concurrency: threads, channels, Arc<Mutex> | advanced |
+| 17 | Async/await with Tokio | advanced |
+| 18 | Networking with std::net | advanced |
+| 19 | Command-line tools (clap) | advanced |
+| 20 | Web with axum 0.8 | expert |
+| 21 | Unsafe Rust basics | expert |
+| 22 | FFI: Rust and C | expert |
+| 23 | WebAssembly (wasm-bindgen) | expert |
+| 24 | Embedded intro (no_std) | expert |
 
 ## 🖼️ Screenshots
 
-| Lesson | Quiz feedback | Mobile |
+Real screenshots from Playwright (`python3 tools/screenshots.py`).
+
+| Home (mobile) | Quiz feedback | Lab editor | Games |
+|---|---|---|---|
+| <img src="docs/screenshots/home-mobile.png" width="190"> | <img src="docs/screenshots/quiz-mobile.png" width="190"> | <img src="docs/screenshots/lab-mobile.png" width="190"> | <img src="docs/screenshots/games-mobile.png" width="190"> |
+| **Exam** | **Memory pairs** | **What does it print?** | **Me / stats** |
+| <img src="docs/screenshots/exam-mobile.png" width="190"> | <img src="docs/screenshots/game-pairs-mobile.png" width="190"> | <img src="docs/screenshots/game-output-mobile.png" width="190"> | <img src="docs/screenshots/me-mobile.png" width="190"> |
+
+| Lesson (desktop) | Lab (desktop) | 24-day plan |
 |---|---|---|
-| <img src="docs/screenshots/lesson-ownership.png" width="300"> | <img src="docs/screenshots/quiz-feedback.png" width="300"> | <img src="docs/screenshots/home-mobile.png" width="160"> |
-| **Exercise (hint + solution)** | **Why Rust (measured)** | **Discord settings** |
-| <img src="docs/screenshots/lesson-exercise.png" width="300"> | <img src="docs/screenshots/why-rust.png" width="300"> | <img src="docs/screenshots/discord-settings-mobile.png" width="160"> |
-| **Converter** | **Network projects** | **English UI** |
-| <img src="docs/screenshots/converter.png" width="300"> | <img src="docs/screenshots/network-projects.png" width="300"> | <img src="docs/screenshots/home-en.png" width="300"> |
-
-All screenshots are real, taken with Playwright (`python3 tools/screenshots.py`).
-
-## 🧠 How it works
-
-```
-content/*.js ──► window.RUST_LESSONS ──► assets/app.js (hash router) ──► lesson / quiz / final / why / net / convert / settings
-     │                                          │
-     │                                          ├─► localStorage "rustro.progress.v1"  (done, best scores, streak, language)
-     │                                          ├─► localStorage "rustro.discord.v1"   (your webhook + opt-ins, optional)
-     │                                          └─► sw.js (offline cache, same-origin only)
-     └─► tools/check-snippets.mjs ──► rustc on every snippet (must compile / must fail with the declared error)
-
-examples/ + bench/ ──► tools/gen-content.mjs ──► content/07-net.js, content/08-why.js   (single source of truth)
-```
-
-- **No build step, no framework, no dependencies.** Plain HTML/CSS/JS; open it from any static host.
-- **Lessons are data.** Each lesson is a JS object with `{ ro, en }` texts, `code`, `exercises` and `quiz`.
-- **Playground links** are `https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&code=` + `encodeURIComponent(code)`.
-- **Streak** = consecutive days on which you finished at least one quiz.
+| <img src="docs/screenshots/lesson-desktop.png" width="300"> | <img src="docs/screenshots/lab-desktop.png" width="300"> | <img src="docs/screenshots/plan-desktop.png" width="300"> |
 
 ## ⚡ Quick start
 
 ```bash
 git clone https://github.com/LucianCeusanRo/rust-ro.git
 cd rust-ro
-python3 -m http.server 8811     # or: npx serve .
-# open http://localhost:8811
+python3 -m http.server 8811     # open http://localhost:8811
 ```
 
-Run the network mini projects (needs Rust from https://rustup.rs):
+## ✅ Verification
 
-```bash
-cd examples/port-checker && cargo run -- 127.0.0.1 22,80,443 && cargo test
-cd ../log-parser && cargo run -- sample.log --level ERROR && cargo test
+| Check | Result |
+|---|---|
+| `node tools/check-snippets.mjs` — every lesson example, lab starter + solution (output must match), every code question (stdout must equal the correct option in RO and EN; no wrong option may equal it; error questions must fail with exactly that code), every game item (fill-in: right option prints the expected output, every wrong option fails or prints something else; types: right type compiles, every wrong type fails). Crate snippets (tokio, clap, axum 0.8, wasm-bindgen, serde) are built with cargo | **575/575 OK** with rustc 1.99.1 — [`docs/snippet-check.txt`](docs/snippet-check.txt) |
+| `python3 tests/ui.test.py` (Playwright, Discord + Playground mocked) — lesson quiz → lesson done, mistakes review, exam grade, marathon lives, lab run, 9 game screens, EN UI, no Discord calls without a webhook, no JS errors | 21/21 |
+| `python3 tests/ui.test.py --live-playground` | lab solution and its tests pass on the real Rust Playground |
+| `node tests/converter.test.mjs` / `node tests/discord.test.mjs` (mocked fetch) | 31/31 · 15/15 |
+| GitHub Actions [`ci.yml`](.github/workflows/ci.yml) | runs all of the above on every push |
+
+## 🧠 How it works
+
+```
+content/NN-*.js ─► window.RUST_LESSONS + QB(cat, [...]) ─► window.RUST_BANK ─► assets/app.js (hash router)
+content/30-games.js ─► window.RUST_GAMES (pairs, order, fill, types)          ├─ localStorage "rustro.progress.v1" (progress, mastery, XP, labs, plan)
+tools/check-snippets.mjs ─► rustc / cargo on everything above                 ├─ play.rust-lang.org/execute (labs, only when you press Run)
+tools/build-dist.mjs ─► dist/ (single inlined index.html + sw.js) ─► Vercel  └─ sw.js offline cache (same-origin only)
 ```
 
-Run every check:
-
-```bash
-npm test          # converter tests + Discord tests (mocked fetch) + rustc check of all 50 snippets
-npm run bench     # re-measure Python vs Rust and regenerate the Why Rust page
-```
-
-## 📚 Tutorial
-
-1. **Pick your language** with the `RO | EN` toggle (top right). It's remembered.
-2. **Open lesson 1** from the home screen. Read a section, then press **▶ Open in Rust Playground** to run the example without installing anything.
-3. **Do the exercises:** start from the starter code, open 💡 *Hint* if you're stuck, compare with ✅ *Solution*.
-4. **Take the quiz.** Every answer shows an explanation. 70% or more marks the lesson as completed and counts towards your 🔥 streak.
-5. **Install Rust locally** (lesson 1 shows how) and run the 🌐 network projects with `cargo run`.
-6. **Finish with the 🏁 final test** — 15 random questions from all lessons.
-7. Optional: paste your Python/Java code into 🔄 *Converter* to get a commented Rust draft, then fix it with `cargo check`.
+Question authoring format: `[question, [correct, wrong…], explanation, { k: "out" | "err" | "ok" | "test", c: code, err: "E0xxx", crate }]`, texts as `"RO || EN"`. The correct option is stored first and shuffled on screen.
 
 ## ⚡ Why Rust (with real numbers)
 
@@ -153,40 +138,32 @@ Settings → *Discord webhook*:
 
 Privacy and safety: the URL is validated (`https://discord.com/api/webhooks/<id>/<token>`, also `canary.`/`ptb.`/`discordapp.com`), stored **only in your browser's localStorage**, shown masked, never logged and never part of this repo. Requests go straight from your browser to discord.com with `allowed_mentions: { parse: [] }` (no pings). Rate limits: one post at a time, ≥1.2 s apart, `X-RateLimit-Remaining`/`Reset-After` honoured, and on HTTP 429 the client waits `retry_after` and retries (max 3 attempts). Tests use a **mocked fetch only** ([`tests/discord.test.mjs`](tests/discord.test.mjs)); the Playwright run intercepts every discord.com request locally.
 
-## ✅ Verification
+## 🔄 Python/Java → Rust converter
 
-| Check | Result |
-|---|---|
-| `node tools/check-snippets.mjs` — every lesson example, starter, solution, network project and benchmark through `rustc` (edition 2021) | **50/50 OK** (46 compile — 31 of them also run without panicking; 4 fail on purpose with E0384, E0382, E0499, E0382) — [`docs/snippet-check.txt`](docs/snippet-check.txt) |
-| `cargo test` + `cargo clippy --all-targets -- -D warnings` in `examples/*` | 3 + 3 tests pass, clippy clean |
-| `node tests/converter.test.mjs` | 31/31, 7/7 converted examples compile — [`docs/converter-test.txt`](docs/converter-test.txt) |
-| `node tests/discord.test.mjs` (mocked fetch) | 15/15 — [`docs/discord-test.txt`](docs/discord-test.txt) |
-| `python3 tools/screenshots.py` (Playwright smoke test) | no page errors |
+[`assets/converter.js`](assets/converter.js) is rule-based (no AI, no server). Output always starts with a "draft — review it" header; the 7 bundled examples compile with rustc. Not translated: inheritance, interfaces, complex lambdas, generators, async, external libraries.
+
+## 💬 Discord webhook (optional)
+
+Settings → Discord: paste **your own** webhook URL (validated as `https://discord.com/api/webhooks/<id>/<token>`), stored **only in your browser**, shown masked, never logged, never in this repo. Opt in to lesson completions / quiz and exam scores / converter output. One post at a time, ≥ 1.2 s apart, HTTP 429 `retry_after` honoured. Tests use a mocked fetch only.
 
 ## 🗂️ Project structure
 
 ```
-index.html, manifest.webmanifest, sw.js   static app shell + PWA
-assets/      app.js (router/UI), app.css, i18n.js, highlight.js, converter.js, converter-examples.js, discord.js, icons
-content/     00-init.js … 06-errors.js (lessons), 07-net.js + 08-why.js (generated)
-examples/    port-checker/, log-parser/  (cargo projects with tests)
-bench/       sieve + collatz in Python and Rust, run.py, results.json
-tests/       converter.test.mjs, discord.test.mjs
-tools/       check-snippets.mjs, gen-content.mjs, screenshots.py
-docs/        screenshots/ + test reports
+index.html, manifest.webmanifest, sw.js   app shell + PWA
+assets/      app.js (UI, quiz engine, games, labs), app.css, i18n.js, highlight.js, converter*.js, discord.js, icons
+content/     00-init.js, 01–06 + 10–27 lessons, 09-basics-bank.js, 30-games.js, 99-bank-merge.js, 07-net.js + 08-why.js (generated)
+tools/       check-snippets.mjs, verify-crates/ (cargo project for crate snippets), build-dist.mjs, screenshots.py
+tests/       ui.test.py, converter.test.mjs, discord.test.mjs
+examples/    port-checker/, log-parser/   ·   bench/   ·   docs/ (screenshots + reports)
 ```
 
-## 🗺️ Roadmap
+## 🚀 Deploy
 
-- [ ] Lessons 7–12: collections (`Vec`, `HashMap`, iterators), traits & generics, lifetimes, modules & crates, tests, threads/async (tokio)
-- [ ] More network projects: async ping monitor, SNMP poller, syslog receiver
-- [ ] In-page run via the Playground API, with output shown under the example
-- [ ] Converter: list comprehensions → iterators everywhere, Python `with open()` → `std::fs`, Java interfaces → traits
-- [ ] Spaced-repetition review of wrong answers
+`npm run build` writes `dist/` (one self-contained `index.html` + `sw.js`, manifest, icons), deployed to Vercel (Hobby, free). Any static host works with the source tree as-is.
 
 ## 🤝 Contributing
 
-Issues and pull requests are welcome — typos in RO/EN, clearer explanations, new quiz questions. Please run `npm test` before opening a PR: every new snippet must pass `tools/check-snippets.mjs`.
+PRs welcome (RO/EN wording, new questions). Run `npm test` — every new snippet or code question must pass `tools/check-snippets.mjs`.
 
 ## 📄 License
 
@@ -198,50 +175,24 @@ Issues and pull requests are welcome — typos in RO/EN, clearer explanations, n
 
 ### 📖 Despre
 
-Rust RO este o platformă gratuită, bilingvă (română / engleză, comutare dintr-un click), pentru a învăța Rust de la zero. Pornește de la aceeași idee ca aplicația mea STS Grilă: lecții scurte, feedback imediat, un scor pe care vrei să-l crești și totul salvat doar în browserul tău.
+Rust RO e o platformă gratuită, bilingvă, construită ca aplicația mea **STS Grilă**: inel „gata pentru Rust”, „Repetă greșelile”, simulare de examen cu notă 1–10, mai multe moduri de grile, plan pe zile și jocuri — totul salvat doar în browserul tău. Conținutul e scris de la zero și **tot codul e compilat cu `rustc`/`cargo`** înainte de publicare.
 
-- **La ce folosește:** înveți pas cu pas bazele Rust — instalare și Cargo, variabile și tipuri, funcții și control flow, ownership și borrowing, structuri/enum-uri/match și tratarea erorilor cu `Result`, `Option` și `?`.
-- **Pe cine ajută:** pe cei care preferă să învețe în română, începătorii care vin din Python/Java și oamenii din rețelistică/telecom care vor unelte Rust mici și practice.
-- Tot conținutul e scris de la zero (nu e copiat din Rust Book), iar **fiecare exemplu Rust este verificat cu `rustc`**.
+### ✨ Ce conține
 
-### ✨ Funcționalități
-
-- 📚 **6 lecții** cu explicații RO + EN, cod colorat și buton **Deschide în Rust Playground** la fiecare exemplu și exercițiu.
-- ✍️ **12 exerciții** cu cod de pornire, indiciu și soluție.
-- 📝 **41 de întrebări** cu explicații + **test final** de 15 întrebări amestecate (prag 70%).
-- ⛔ Exemple care **nu compilează intenționat** (E0382, E0384, E0499), ca să înveți să citești erorile compilatorului.
-- 🌐 **Rust pentru rețeliști**: verificator de porturi TCP (`std::net`) și parser de loguri, rulate local cu `cargo`, cu teste.
-- ⚡ Pagina **De ce Rust**, cu cifre măsurate real (timp + RAM față de Python) și surse citate.
-- 🔄 **Convertor Python/Java → Rust**: pe reguli, 100% în browser, fără AI, cu explicații în comentarii.
-- 💬 **Webhook Discord opțional**: trimite lecțiile terminate, scorurile și codul convertit pe canalul **tău**.
-- 🔥 Progres, cele mai bune scoruri și **zile la rând** în `localStorage` — fără cont, fără server, fără tracking.
-- 📱 Interfață dark, mobile-first, instalabilă (PWA), merge offline, accesibilă de la tastatură și cu cititor de ecran.
+- 📚 **24 de lecții** RO + EN, de la instalare până la async/Tokio, rețelistică cu `std::net`, unelte CLI cu clap, web cu axum, unsafe, FFI, WASM și embedded.
+- 📝 **533 de întrebări**; **258 sunt întrebări de cod verificate de compilator** (ieșirea reală a programului sau codul exact de eroare).
+- 🎯 Moduri: Învățare, Exercițiu, Adaptiv, Maraton (3 vieți), Lecție rapidă (5 inimi), quiz de lecție (≥ 70%), Greșelile mele (repetare spațiată), **Simulare examen** (20 de întrebări, 20 de minute, nota = 1 + 9 × corecte/20).
+- 🎮 **10 jocuri**: provocarea zilei, adevărat/fals, fulger, prinde răspunsul, perechi, pune în ordine, completează codul, ce afișează, ce eroare, ce tip are.
+- 🧪 **32 de laboratoare** cu editor în pagină, potrivit pe telefon (bară cu taste rapide), rulare prin API-ul oficial Rust Playground și verificare automată a ieșirii.
+- 📈 Stăpânire 0–5 pe întrebare, XP și niveluri, 🔥 zile la rând, plan de 24 de zile, statistici, export/import JSON.
+- 📱 Mobile-first, temă luminoasă/întunecată, PWA instalabilă, merge offline.
 
 ### ⚡ Pornire rapidă
 
 ```bash
 git clone https://github.com/LucianCeusanRo/rust-ro.git
-cd rust-ro
-python3 -m http.server 8811
-# deschide http://localhost:8811
+cd rust-ro && python3 -m http.server 8811   # deschide http://localhost:8811
 ```
-
-Proiectele de rețea (ai nevoie de Rust de pe https://rustup.rs):
-
-```bash
-cd examples/port-checker && cargo run -- 127.0.0.1 22,80,443
-cd ../log-parser && cargo run -- sample.log --level ERROR
-```
-
-### 📚 Tutorial pas cu pas
-
-1. **Alege limba** din comutatorul `RO | EN` (dreapta sus). Rămâne salvată.
-2. **Deschide lecția 1.** Citești o secțiune și apeși **▶ Deschide în Rust Playground** ca să rulezi exemplul fără să instalezi nimic.
-3. **Rezolvă exercițiile:** pornești de la codul dat, deschizi 💡 *Indiciu* dacă te blochezi și compari cu ✅ *Soluție*.
-4. **Fă quiz-ul.** Fiecare răspuns are explicație. Cu 70% sau mai mult lecția e marcată ca terminată și îți crește 🔥 seria de zile.
-5. **Instalează Rust local** (lecția 1 arată cum) și rulează 🌐 proiectele de rețea cu `cargo run`.
-6. **Termină cu 🏁 testul final** — 15 întrebări din toate lecțiile.
-7. Opțional: lipește cod Python/Java în 🔄 *Convertor* ca să primești o ciornă Rust comentată, apoi o repari cu `cargo check`.
 
 ### ⚡ De ce Rust (cu cifre reale)
 
@@ -259,17 +210,8 @@ Transformă construcțiile uzuale (funcții, variabile, if/for/while, liste → 
 
 URL-ul e validat, salvat **doar în browserul tău**, afișat mascat, nu e scris în loguri și nu e în repo. Aplicația respectă limitele Discord (un mesaj la ~1,2 s, așteaptă la 429). Testele folosesc doar un `fetch` simulat.
 
-### 🗺️ Planuri
-
-- [ ] Lecțiile 7–12: colecții și iteratori, trait-uri și generice, lifetimes, module și crate-uri, teste, fire de execuție/async
-- [ ] Mai multe proiecte de rețea: monitor de ping async, poller SNMP, receptor syslog
-- [ ] Rulare direct în pagină prin API-ul Playground
-
 ### 👤 Autor
 
 **Lucian Ceușan** — telecom & network technician, București, România · [GitHub](https://github.com/LucianCeusanRo) · [lucian-ceusan.vercel.app](https://lucian-ceusan.vercel.app)
 
 
-## Deploy
-
-`npm run build` writes `dist/` (one self-contained `index.html` with CSS/JS inlined, plus `sw.js`, the manifest and icons). The live site on Vercel is deployed from `dist/`. The source tree itself also works as-is on any static host.
