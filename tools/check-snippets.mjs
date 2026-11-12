@@ -46,7 +46,10 @@ for (const q of W.RUST_BANK) {
 }
 const G = W.RUST_GAMES || {};
 if (!only || only.includes("games")) {
-  (G.fill || []).forEach((g, i) => items.push({ id: `G.fill${i + 1}`, src: g.c.replace("___", g.a), expect: g.expect, noRun: g.noRun }));
+  (G.fill || []).forEach((g, i) => {
+    items.push({ id: `G.fill${i + 1}`, src: g.c.replace("___", g.a), expect: g.expect, noRun: g.noRun });
+    (g.w || []).forEach((w, j) => items.push({ id: `G.fill${i + 1}.no${j + 1}`, src: g.c.replace("___", w), notExpect: g.expect }));
+  });
   (G.types || []).forEach((g, i) => {
     const prog = (t) => `${g.pre || ""}\nfn main() {\n    let _x: ${t} = ${g.e};\n}`;
     items.push({ id: `G.type${i + 1}.ok`, src: prog(g.t), noRun: true });
@@ -66,6 +69,11 @@ const run = (cmd, argv, opts = {}) => new Promise((res) => {
 });
 function judge(it, comp, exec) {
   if (it.failsAny) return comp.code !== 0 ? "FAILS as expected" : "UNEXPECTED: wrong type compiled";
+  if (it.notExpect != null) {
+    if (comp.code !== 0) return "FAILS as expected (wrong option)";
+    const g = exec ? exec.out.trim() : "";
+    return exec && (exec.code !== 0 || g !== it.notExpect.trim()) ? "FAILS as expected (different output)" : "UNEXPECTED: wrong option prints the expected output";
+  }
   if (it.fails) return comp.code !== 0 && comp.err.includes(`error[${it.fails}]`) ? `FAILS as expected (${it.fails})` : `UNEXPECTED: wanted ${it.fails}\n${comp.err.slice(0, 1500)}`;
   if (comp.code !== 0) return "COMPILE ERROR\n" + comp.err.slice(0, 3000);
   if (it.noRun) return "compiles";
@@ -86,6 +94,7 @@ async function checkRustc(it) {
   const comp = await run("rustc", ["--edition", "2021", "-A", "warnings", ...(it.test ? ["--test"] : []), "-o", bin, file]);
   let exec = null;
   if (comp.code === 0 && !it.noRun && !it.fails && !it.failsAny) exec = await run(bin, [], { timeout: 15000 });
+  if (exec && exec.err.includes("TIMEOUT") && it.notExpect != null) exec.code = 1;
   return judge(it, comp, exec);
 }
 const vdir = path.join(root, "tools", "verify-crates");
