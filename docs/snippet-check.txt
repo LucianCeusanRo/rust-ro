@@ -1,54 +1,234 @@
 # Snippet check (rustc 1.99.1 (58cf8f9c3 2026-10-13))
+Lessons: 17 · questions: 252 (code-verified: 111) · labs: 25
 
-✔ L1.section3              compiles + runs
-✔ L1.section5              compiles + runs
-✔ L1.ex1.starter           compiles
-✔ L1.ex1.solution          compiles + runs
-✔ L1.ex2.starter           compiles
-✔ L1.ex2.solution          compiles + runs
-✔ L2.section1              FAILS as expected (E0384)
-✔ L2.section2              compiles + runs
-✔ L2.section3              compiles + runs
-✔ L2.section4              compiles + runs
-✔ L2.ex1.starter           compiles
-✔ L2.ex1.solution          compiles + runs
-✔ L2.ex2.starter           compiles
-✔ L2.ex2.solution          compiles + runs
-✔ L3.section1              compiles + runs
-✔ L3.section2              compiles + runs
-✔ L3.section3              compiles + runs
-✔ L3.ex1.starter           compiles
-✔ L3.ex1.solution          compiles + runs
-✔ L3.ex2.starter           compiles
-✔ L3.ex2.solution          compiles + runs
-✔ L4.section1              compiles + runs
-✔ L4.section2              FAILS as expected (E0382)
-✔ L4.section3              compiles + runs
-✔ L4.section4              compiles + runs
-✔ L4.section5              FAILS as expected (E0499)
-✔ L4.section6              compiles + runs
-✔ L4.ex1.starter           FAILS as expected (E0382)
-✔ L4.ex1.solution          compiles + runs
-✔ L4.ex2.starter           compiles
-✔ L4.ex2.solution          compiles + runs
-✔ L5.section1              compiles + runs
-✔ L5.section2              compiles + runs
-✔ L5.section3              compiles + runs
-✔ L5.ex1.starter           compiles
-✔ L5.ex1.solution          compiles + runs
-✔ L5.ex2.starter           compiles
-✔ L5.ex2.solution          compiles + runs
-✔ L6.section1              compiles + runs
-✔ L6.section2              compiles + runs
-✔ L6.section3              compiles + runs
-✔ L6.section4              compiles + runs
-✔ L6.ex1.starter           compiles
-✔ L6.ex1.solution          compiles + runs
-✔ L6.ex2.starter           compiles
-✔ L6.ex2.solution          compiles + runs
-✔ NET.port-checker         compiles
-✔ NET.log-parser           compiles
-✔ WHY.sieve                compiles
-✔ WHY.collatz              compiles
+✔ L1.s3                      compiles + runs
+✔ L1.s5                      compiles + runs
+✔ L1.lab1.starter            compiles
+✔ L1.lab1.solution           compiles + runs
+✔ L1.lab2.starter            compiles
+✔ L1.lab2.solution           compiles + runs
+✔ L2.s1                      FAILS as expected (E0384)
+✔ L2.s2                      compiles + runs
+✔ L2.s3                      compiles + runs
+✔ L2.s4                      compiles + runs
+✔ L2.lab1.starter            compiles
+✔ L2.lab1.solution           compiles + runs
+✔ L2.lab2.starter            compiles
+✔ L2.lab2.solution           compiles + runs
+✔ L3.s1                      compiles + runs
+✔ L3.s2                      compiles + runs
+✔ L3.s3                      compiles + runs
+✔ L3.lab1.starter            compiles
+✔ L3.lab1.solution           compiles + runs
+✔ L3.lab2.starter            compiles
+✔ L3.lab2.solution           compiles + runs
+✔ L4.s1                      compiles + runs
+✔ L4.s2                      FAILS as expected (E0382)
+✔ L4.s3                      compiles + runs
+✔ L4.s4                      compiles + runs
+✔ L4.s5                      FAILS as expected (E0499)
+✔ L4.s6                      compiles + runs
+✔ L4.lab1.starter            FAILS as expected (E0382)
+✔ L4.lab1.solution           compiles + runs
+✔ L4.lab2.starter            compiles
+✔ L4.lab2.solution           compiles + runs
+✔ L5.s1                      compiles + runs
+✔ L5.s2                      compiles + runs
+✔ L5.s3                      compiles + runs
+✔ L5.lab1.starter            compiles
+✔ L5.lab1.solution           compiles + runs
+✔ L5.lab2.starter            compiles
+✔ L5.lab2.solution           compiles + runs
+✔ L6.s1                      compiles + runs
+✔ L6.s2                      compiles + runs
+✔ L6.s3                      compiles + runs
+✔ L6.s4                      compiles + runs
+✔ L6.lab1.starter            compiles
+✔ L6.lab1.solution           compiles + runs
+✔ L6.lab2.starter            compiles
+✔ L6.lab2.solution           compiles + runs
+✔ L7.s1                      compiles + runs
+✔ L7.s2                      compiles + runs
+✔ L7.s3                      compiles + runs
+✔ L7.s4                      compiles + runs
+✔ L7.lab1.starter            compiles
+✔ L7.lab1.solution           compiles + runs + output ✓
+✔ L7.lab2.starter            compiles
+✔ L7.lab2.solution           compiles + runs + output ✓
+✔ L8.s1                      compiles + runs
+✔ L8.s2                      compiles + runs
+✔ L8.s3                      compiles + runs
+✔ L8.s4                      compiles + runs
+✔ L8.lab1.starter            compiles
+✔ L8.lab1.solution           compiles + runs + output ✓
+✔ L9.s1                      compiles + runs
+✔ L9.s2                      compiles + runs
+✔ L9.s3                      compiles + runs
+✔ L9.s4                      compiles + runs
+✔ L9.lab1.starter            compiles
+✔ L9.lab1.solution           compiles + runs + output ✓
+✔ L9.lab2.starter            compiles
+✔ L9.lab2.solution           compiles + runs + output ✓
+✔ L10.s1                     FAILS as expected (E0597)
+✔ L10.s2                     compiles + runs
+✔ L10.s3                     compiles + runs
+✔ L10.s4                     compiles + runs
+✔ L10.lab1.starter           FAILS as expected (E0106)
+✔ L10.lab1.solution          compiles + runs + output ✓
+✔ L11.s1                     compiles + runs
+✔ L11.s2                     compiles + runs
+✔ L11.s3                     compiles + runs
+✔ L11.s4                     compiles + runs
+✔ L11.lab1.starter           compiles
+✔ L11.lab1.solution          compiles + runs + output ✓
+✔ L12.s1                     compiles + runs
+✔ L12.s2                     compiles + runs
+✔ L12.s3                     compiles + runs
+✔ L12.s4                     compiles + runs
+✔ L12.lab1.starter           compiles
+✔ L12.lab1.solution          compiles + runs + output ✓
+✔ L13.s1                     compiles + runs
+✔ L13.s4                     compiles + runs
+✔ L13.lab1.starter           FAILS as expected (E0603)
+✔ L13.lab1.solution          compiles + runs + output ✓
+✔ L14.s1                     tests pass
+✔ L14.s2                     tests pass
+✔ L14.s4                     tests pass
+✔ L14.lab1.starter           compiles
+✔ L14.lab1.solution          compiles + runs + output ✓
+✔ L14.lab1.tests             tests pass
+✔ L15.s1                     compiles + runs
+✔ L15.s2                     compiles + runs
+✔ L15.s3                     compiles + runs
+✔ L15.s4                     compiles + runs
+✔ L15.lab1.starter           compiles
+✔ L15.lab1.solution          compiles + runs + output ✓
+✔ L16.s1                     compiles + runs
+✔ L16.s2                     compiles + runs
+✔ L16.s3                     compiles + runs
+✔ L16.s4                     compiles + runs
+✔ L16.lab1.starter           compiles
+✔ L16.lab1.solution          compiles + runs + output ✓
+✔ L17.s1                     compiles + runs
+✔ L17.s2                     compiles + runs
+✔ L17.s3                     compiles + runs
+✔ L17.s4                     compiles + runs
+✔ L17.lab1.starter           compiles
+✔ L17.lab1.solution          compiles + runs + output ✓
+✔ Q.l7-4                     compiles + runs + output ✓
+✔ Q.l7-5                     compiles + runs + output ✓
+✔ Q.l7-7                     FAILS as expected (E0277)
+✔ Q.l7-8                     compiles + runs + output ✓
+✔ Q.l7-11                    compiles + runs + output ✓
+✔ Q.l7-14                    compiles + runs + output ✓
+✔ Q.l7-16                    compiles + runs + output ✓
+✔ Q.l7-18                    compiles + runs + output ✓
+✔ Q.l7-19                    FAILS as expected (E0502)
+✔ Q.l7-21                    compiles + runs + output ✓
+✔ Q.l7-23                    FAILS as expected (E0277)
+✔ Q.l7-24                    compiles + runs + output ✓
+✔ Q.l8-3                     FAILS as expected (E0369)
+✔ Q.l8-4                     compiles + runs + output ✓
+✔ Q.l8-8                     compiles + runs + output ✓
+✔ Q.l8-10                    compiles + runs + output ✓
+✔ Q.l8-11                    FAILS as expected (E0308)
+✔ Q.l8-13                    compiles + runs + output ✓
+✔ Q.l8-14                    compiles + runs + output ✓
+✔ Q.l8-17                    compiles + runs + output ✓
+✔ Q.l8-19                    compiles + runs + output ✓
+✔ Q.l8-21                    FAILS as expected (E0282)
+✔ Q.l8-23                    compiles + runs + output ✓
+✔ Q.l9-2                     compiles + runs + output ✓
+✔ Q.l9-6                     compiles + runs + output ✓
+✔ Q.l9-7                     compiles + runs + output ✓
+✔ Q.l9-8                     FAILS as expected (E0277)
+✔ Q.l9-9                     FAILS as expected (E0046)
+✔ Q.l9-10                    FAILS as expected (E0369)
+✔ Q.l9-13                    compiles + runs + output ✓
+✔ Q.l9-16                    FAILS as expected (E0117)
+✔ Q.l9-17                    compiles + runs + output ✓
+✔ Q.l9-21                    FAILS as expected (E0204)
+✔ Q.l9-23                    compiles + runs + output ✓
+✔ Q.l9-25                    compiles + runs + output ✓
+✔ Q.l10-2                    FAILS as expected (E0597)
+✔ Q.l10-3                    FAILS as expected (E0106)
+✔ Q.l10-5                    compiles + runs + output ✓
+✔ Q.l10-6                    FAILS as expected (E0597)
+✔ Q.l10-12                   FAILS as expected (E0106)
+✔ Q.l10-13                   compiles + runs + output ✓
+✔ Q.l10-16                   FAILS as expected (E0515)
+✔ Q.l10-18                   FAILS as expected (E0502)
+✔ Q.l10-19                   compiles + runs + output ✓
+✔ Q.l10-22                   compiles + runs + output ✓
+✔ Q.l11-2                    compiles + runs + output ✓
+✔ Q.l11-6                    compiles + runs + output ✓
+✔ Q.l11-9                    FAILS as expected (E0373)
+✔ Q.l11-10                   compiles + runs + output ✓
+✔ Q.l11-11                   FAILS as expected (E0373)
+✔ Q.l11-12                   FAILS as expected (E0382)
+✔ Q.l11-13                   compiles + runs + output ✓
+✔ Q.l11-15                   FAILS as expected (E0308)
+✔ Q.l11-17                   compiles + runs + output ✓
+✔ Q.l11-18                   compiles + runs + output ✓
+✔ Q.l11-20                   compiles + runs + output ✓
+✔ Q.l12-3                    compiles + runs + output ✓
+✔ Q.l12-4                    compiles + runs + output ✓
+✔ Q.l12-5                    compiles + runs + output ✓
+✔ Q.l12-6                    compiles + runs + output ✓
+✔ Q.l12-8                    compiles + runs + output ✓
+✔ Q.l12-9                    compiles + runs + output ✓
+✔ Q.l12-10                   compiles + runs + output ✓
+✔ Q.l12-11                   compiles + runs + output ✓
+✔ Q.l12-13                   compiles + runs + output ✓
+✔ Q.l12-14                   compiles + runs + output ✓
+✔ Q.l12-15                   FAILS as expected (E0382)
+✔ Q.l12-17                   compiles + runs + output ✓
+✔ Q.l12-18                   compiles + runs + output ✓
+✔ Q.l12-19                   compiles + runs + output ✓
+✔ Q.l12-20                   compiles + runs + output ✓
+✔ Q.l12-22                   compiles + runs + output ✓
+✔ Q.l12-24                   compiles + runs + output ✓
+✔ Q.l13-2                    FAILS as expected (E0603)
+✔ Q.l13-3                    FAILS as expected (E0616)
+✔ Q.l13-5                    compiles + runs + output ✓
+✔ Q.l13-13                   compiles + runs + output ✓
+✔ Q.l13-18                   FAILS as expected (E0433)
+✔ Q.l13-19                   FAILS as expected (E0425)
+✔ Q.l13-23                   compiles + runs + output ✓
+✔ Q.l14-16                   tests pass
+✔ Q.l14-17                   compiles + runs + output ✓
+✔ Q.l14-18                   compiles + runs + output ✓
+✔ Q.l14-19                   compiles + runs + output ✓
+✔ Q.l14-21                   tests pass
+✔ Q.l15-2                    FAILS as expected (E0072)
+✔ Q.l15-3                    compiles + runs + output ✓
+✔ Q.l15-5                    compiles + runs + output ✓
+✔ Q.l15-7                    FAILS as expected (E0277)
+✔ Q.l15-10                   compiles + runs + output ✓
+✔ Q.l15-11                   compiles + runs + output ✓
+✔ Q.l15-13                   compiles + runs + output ✓
+✔ Q.l15-15                   compiles + runs + output ✓
+✔ Q.l15-16                   compiles + runs + output ✓
+✔ Q.l15-18                   FAILS as expected (E0040)
+✔ Q.l15-20                   compiles + runs + output ✓
+✔ Q.l15-21                   compiles + runs + output ✓
+✔ Q.l16-3                    compiles + runs + output ✓
+✔ Q.l16-5                    compiles + runs + output ✓
+✔ Q.l16-8                    compiles + runs + output ✓
+✔ Q.l16-11                   compiles + runs + output ✓
+✔ Q.l16-14                   FAILS as expected (E0277)
+✔ Q.l16-18                   compiles + runs + output ✓
+✔ Q.l16-21                   compiles + runs + output ✓
+✔ Q.l17-2                    compiles + runs + output ✓
+✔ Q.l17-5                    FAILS as expected (E0728)
+✔ Q.l17-7                    compiles + runs + output ✓
+✔ Q.l17-10                   compiles + runs + output ✓
+✔ Q.l17-14                   compiles + runs + output ✓
+✔ Q.l17-18                   compiles + runs
+✔ Q.l17-19                   compiles + runs + output ✓
+✔ NET.port-checker           compiles
+✔ NET.log-parser             compiles
+✔ WHY.sieve                  compiles
+✔ WHY.collatz                compiles
 
-Total: 50, ok: 50, failed: 0
+Total checks: 229, ok: 229, failed: 0
