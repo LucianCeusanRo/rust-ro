@@ -10,6 +10,7 @@
     "check:rust": "node tools/check-snippets.mjs",
     "test": "node tests/converter.test.mjs && node tests/discord.test.mjs && node tools/check-snippets.mjs",
     "screenshots": "python3 tools/screenshots.py",
-    "bench": "python3 bench/run.py && node tools/gen-content.mjs"
+    "bench": "python3 bench/run.py && node tools/gen-content.mjs",
+    "build": "node tools/build-dist.mjs"
   }
 }

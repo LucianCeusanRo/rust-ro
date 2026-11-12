@@ -4,6 +4,8 @@
 
 # Rust RO 🦀
 
+**▶ Live: [rust-ro.vercel.app](https://rust-ro.vercel.app)**
+
 **Learn Rust in Romanian and English — lessons, exercises, quizzes, network mini projects and a Python/Java → Rust draft converter. Static, no account, works offline.**
 
 <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green.svg"></a>
@@ -266,3 +268,8 @@ URL-ul e validat, salvat **doar în browserul tău**, afișat mascat, nu e scris
 ### 👤 Autor
 
 **Lucian Ceușan** — telecom & network technician, București, România · [GitHub](https://github.com/LucianCeusanRo) · [lucian-ceusan.vercel.app](https://lucian-ceusan.vercel.app)
+
+
+## Deploy
+
+`npm run build` writes `dist/` (one self-contained `index.html` with CSS/JS inlined, plus `sw.js`, the manifest and icons). The live site on Vercel is deployed from `dist/`. The source tree itself also works as-is on any static host.
