@@ -1,0 +1,8 @@
+[package]
+name = "log-parser"
+version = "0.1.0"
+edition = "2021"
+description = "Parses network device log lines and summarizes them (Rust RO mini project)"
+license = "MIT"
+
+[dependencies]

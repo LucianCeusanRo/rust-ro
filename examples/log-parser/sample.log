@@ -1,0 +1,8 @@
+2026-11-12T08:00:01Z INFO  R1 ge-0/0/1 link up speed=1000
+2026-11-12T08:03:12Z WARN  R1 ge-0/0/2 crc errors=14
+2026-11-12T08:03:40Z ERROR R2 xe-1/0/0 link down
+2026-11-12T08:04:05Z ERROR R2 xe-1/0/0 link down
+2026-11-12T08:05:55Z INFO  R2 xe-1/0/0 link up speed=10000
+this line is garbage and should be counted as invalid
+2026-11-12T08:07:00Z WARN  SW3 gi1/0/24 high utilization=93
+2026-11-12T08:09:30Z ERROR R1 ge-0/0/2 link down

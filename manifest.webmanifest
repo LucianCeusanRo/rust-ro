@@ -1,0 +1,17 @@
+{
+  "name": "Rust RO — învață Rust (RO/EN)",
+  "short_name": "Rust RO",
+  "description": "Lecții, exerciții și quiz-uri Rust în română și engleză. Fără cont, merge offline.",
+  "lang": "ro",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b0d12",
+  "theme_color": "#0b0d12",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icon-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

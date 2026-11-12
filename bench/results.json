@@ -1,0 +1,38 @@
+{
+  "python": "3.13.5",
+  "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+  "cpu": "Intel(R) Xeon(R) Processor",
+  "date": "2026-11-12",
+  "runs": 3,
+  "method": "median wall time of 3 runs; peak RSS = max VmHWM from /proc/<pid>/status",
+  "results": [
+    {
+      "label": "sieve Python",
+      "cmd": "python3 bench/sieve.py 10000000",
+      "median_s": 1.367,
+      "peak_rss_mib": 85.3,
+      "output": "664579 3203324994356"
+    },
+    {
+      "label": "sieve Rust",
+      "cmd": "rustc -C opt-level=3 --edition 2021 -o bench/out/sieve bench/sieve.rs && bench/out/sieve 10000000",
+      "median_s": 0.04,
+      "peak_rss_mib": 11.6,
+      "output": "664579 3203324994356"
+    },
+    {
+      "label": "collatz Python",
+      "cmd": "python3 bench/collatz.py 1000000",
+      "median_s": 7.245,
+      "peak_rss_mib": 9.1,
+      "output": "837799 524"
+    },
+    {
+      "label": "collatz Rust",
+      "cmd": "rustc -C opt-level=3 --edition 2021 -o bench/out/collatz bench/collatz.rs && bench/out/collatz 1000000",
+      "median_s": 0.141,
+      "peak_rss_mib": 2.1,
+      "output": "837799 524"
+    }
+  ]
+}

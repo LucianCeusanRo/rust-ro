@@ -1,0 +1,17 @@
+✔ accepts discord.com webhook URLs
+✔ rejects non-discord / http / malformed URLs
+✔ mask hides the token
+✔ test payload: one embed, no mentions
+✔ quiz payload has score + percent
+✔ converter payload is a rust code block within Discord limits
+✔ send() posts JSON to the given webhook only
+✔ send() refuses invalid URLs without calling fetch
+✔ 429 → waits retry_after then retries
+✔ X-RateLimit-Remaining: 0 delays the next post
+✔ posts are serialized with a minimum gap
+✔ gives up after 3 attempts of 429
+✔ 404 reports invalid webhook
+✔ store keeps the URL only in the provided storage
+✔ nothing logged the webhook URL
+
+Total: 15, passed: 15, failed: 0 (fetch was mocked; no network requests)

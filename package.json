@@ -1,0 +1,15 @@
+{
+  "name": "rust-ro",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bilingual (RO/EN) Rust learning platform — static site, no backend.",
+  "license": "MIT",
+  "scripts": {
+    "serve": "python3 -m http.server 8811 --bind 127.0.0.1",
+    "gen": "node tools/gen-content.mjs",
+    "check:rust": "node tools/check-snippets.mjs",
+    "test": "node tests/converter.test.mjs && node tests/discord.test.mjs && node tools/check-snippets.mjs",
+    "screenshots": "python3 tools/screenshots.py",
+    "bench": "python3 bench/run.py && node tools/gen-content.mjs"
+  }
+}

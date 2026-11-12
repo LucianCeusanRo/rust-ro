@@ -1,0 +1,54 @@
+# Snippet check (rustc 1.99.1 (58cf8f9c3 2026-10-13))
+
+✔ L1.section3              compiles + runs
+✔ L1.section5              compiles + runs
+✔ L1.ex1.starter           compiles
+✔ L1.ex1.solution          compiles + runs
+✔ L1.ex2.starter           compiles
+✔ L1.ex2.solution          compiles + runs
+✔ L2.section1              FAILS as expected (E0384)
+✔ L2.section2              compiles + runs
+✔ L2.section3              compiles + runs
+✔ L2.section4              compiles + runs
+✔ L2.ex1.starter           compiles
+✔ L2.ex1.solution          compiles + runs
+✔ L2.ex2.starter           compiles
+✔ L2.ex2.solution          compiles + runs
+✔ L3.section1              compiles + runs
+✔ L3.section2              compiles + runs
+✔ L3.section3              compiles + runs
+✔ L3.ex1.starter           compiles
+✔ L3.ex1.solution          compiles + runs
+✔ L3.ex2.starter           compiles
+✔ L3.ex2.solution          compiles + runs
+✔ L4.section1              compiles + runs
+✔ L4.section2              FAILS as expected (E0382)
+✔ L4.section3              compiles + runs
+✔ L4.section4              compiles + runs
+✔ L4.section5              FAILS as expected (E0499)
+✔ L4.section6              compiles + runs
+✔ L4.ex1.starter           FAILS as expected (E0382)
+✔ L4.ex1.solution          compiles + runs
+✔ L4.ex2.starter           compiles
+✔ L4.ex2.solution          compiles + runs
+✔ L5.section1              compiles + runs
+✔ L5.section2              compiles + runs
+✔ L5.section3              compiles + runs
+✔ L5.ex1.starter           compiles
+✔ L5.ex1.solution          compiles + runs
+✔ L5.ex2.starter           compiles
+✔ L5.ex2.solution          compiles + runs
+✔ L6.section1              compiles + runs
+✔ L6.section2              compiles + runs
+✔ L6.section3              compiles + runs
+✔ L6.section4              compiles + runs
+✔ L6.ex1.starter           compiles
+✔ L6.ex1.solution          compiles + runs
+✔ L6.ex2.starter           compiles
+✔ L6.ex2.solution          compiles + runs
+✔ NET.port-checker         compiles
+✔ NET.log-parser           compiles
+✔ WHY.sieve                compiles
+✔ WHY.collatz              compiles
+
+Total: 50, ok: 50, failed: 0

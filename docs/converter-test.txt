@@ -1,0 +1,42 @@
+✔ py print → println!
+✔ py f-string inlines identifiers
+✔ py range(a, b) → a..b
+✔ py while True → loop
+✔ py None checks
+✔ py and/or/not
+✔ py list append → push
+✔ py elif → else if
+✔ py strings inside quotes are untouched
+✔ py try/except produces a warning
+✔ py inheritance warns
+✔ java println concat → format
+✔ java i++ → += 1
+✔ java null → None
+✔ java camelCase → snake_case
+✔ language auto-detect
+✔ every output starts with the draft warning
+✔ example py-basics: expected mappings
+✔ example py-basics: generated draft compiles with rustc
+✔ example py-dict: expected mappings
+✔ example py-dict: generated draft compiles with rustc
+✔ example py-class: expected mappings
+✔ example py-class: generated draft compiles with rustc
+✔ example py-errors: expected mappings
+✔ example py-errors: generated draft compiles with rustc
+✔ example java-basics: expected mappings
+✔ example java-basics: generated draft compiles with rustc
+✔ example java-class: expected mappings
+✔ example java-class: generated draft compiles with rustc
+✔ example java-errors: expected mappings
+✔ example java-errors: generated draft compiles with rustc
+
+Compile check of converted examples:
+  compiles  py-basics  → output: total=16 5 | step 0 | step 1 | step 2
+  compiles  py-dict  → output: {"down": 1, "up": 1, "link": 3}
+  compiles  py-class  → output: ge-0/0/1 1000 Mbps [down]
+  compiles  py-errors  → output: 443 | Some(20) | None
+  compiles  java-basics  → output: Sum: 15
+  compiles  java-class  → output: SFP: 6
+  compiles  java-errors  → output: 443 | unknown host
+
+Total: 31, passed: 31, failed: 0

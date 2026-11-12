@@ -1,0 +1,9 @@
+bench/out/
+target/
+**/target/
+node_modules/
+.DS_Store
+*.log
+!examples/log-parser/sample.log
+tests/out/
+.env

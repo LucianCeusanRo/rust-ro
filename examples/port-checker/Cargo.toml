@@ -1,0 +1,8 @@
+[package]
+name = "port-checker"
+version = "0.1.0"
+edition = "2021"
+description = "Tiny TCP port checker using only std::net (Rust RO mini project)"
+license = "MIT"
+
+[dependencies]
